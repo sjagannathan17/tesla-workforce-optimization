@@ -1,4 +1,4 @@
-### 2. Tesla Workforce Optimization
+###  Tesla Workforce Optimization
 - **Language:** R
 - **Files:** `Tesla_Complete_Solution.R` 
 - **Description:** Linear programming model for bilingual customer support staffing
