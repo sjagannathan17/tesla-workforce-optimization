@@ -6,7 +6,7 @@
 
 ---
 
-## 🎯 The Problem
+## The Problem
 
 Tesla's customer-support function staffs agents in multiple languages across multiple shifts. Workforce schedules built by hand or by spreadsheet typically:
 
@@ -20,7 +20,7 @@ Even a small percentage saving compounds at Tesla's scale (a 2.2% saving on a si
 
 ---
 
-## 👥 Users & Jobs-to-be-Done
+## Users & Jobs-to-be-Done
 
 | User | Job-to-be-Done | Today's Workaround | Pain |
 |------|----------------|--------------------|------|
@@ -30,7 +30,7 @@ Even a small percentage saving compounds at Tesla's scale (a 2.2% saving on a si
 
 ---
 
-## 💡 The Solution
+## The Solution
 
 A linear-programming formulation in R that takes **demand × language × shift** as input and outputs the cost-minimizing assignment.
 
@@ -38,8 +38,7 @@ A linear-programming formulation in R that takes **demand × language × shift**
 
 - **Decision variables:** Number of agents assigned per (language × shift)
 - **Objective:** Minimize total daily cost
-- **Constraints:**
-  - Demand coverage per (language × shift)
+- **Constraints:** - Demand coverage per (language × shift)
   - Bilingual agents counted against either language
   - Max agents per shift (capacity)
   - Min agents per language (coverage floor)
@@ -55,7 +54,7 @@ A linear-programming formulation in R that takes **demand × language × shift**
 
 ---
 
-## 📊 Impact & Metrics
+## Impact & Metrics
 
 | Metric | Result |
 |--------|--------|
@@ -68,7 +67,7 @@ A linear-programming formulation in R that takes **demand × language × shift**
 
 ---
 
-## 🛣️ What I'd Build Next
+## What I'd Build Next
 
 | Priority | Feature | Why this, why now |
 |----------|---------|-------------------|
@@ -81,19 +80,19 @@ A linear-programming formulation in R that takes **demand × language × shift**
 
 ---
 
-## 👤 My Role
+## My Role
 
 **Group 5, Operations Research course (MSBA, SCU).**
 
 **What I personally owned:**
-- ✅ Problem framing — translated the case study into a tractable LP formulation
-- ✅ Bilingual-agent modeling (the move that produced the savings)
-- ✅ R implementation in `Tesla_Complete_Solution.R`
-- ✅ Final report write-up
+- Problem framing — translated the case study into a tractable LP formulation
+- Bilingual-agent modeling (the move that produced the savings)
+- R implementation in `Tesla_Complete_Solution.R`
+- Final report write-up
 
 ---
 
-## 🧠 What I Learned
+## What I Learned
 
 - **The formulation is the work.** Once the LP is correctly formulated, `lpSolve` returns the answer in milliseconds. 90% of the time was on identifying decision variables, constraints, and the objective.
 - **Shadow prices are an under-used product surface.** The "interesting" output of an LP isn't always the optimal answer — it's *which constraints are binding*. That's actionable information for a workforce manager. Most LP outputs hide this in a footnote.
@@ -101,7 +100,7 @@ A linear-programming formulation in R that takes **demand × language × shift**
 
 ---
 
-## 🔧 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|------------|
@@ -111,7 +110,7 @@ A linear-programming formulation in R that takes **demand × language × shift**
 
 ---
 
-## 📁 Files
+## Files
 
 - `Tesla_Complete_Solution.R` — Full LP implementation, sensitivity analysis, results
 - `Tesla_Report_Final_Complete_Group5.pdf` — Written case-study report
